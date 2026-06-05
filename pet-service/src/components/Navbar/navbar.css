@@ -1,0 +1,156 @@
+/* General Navbar Styling */
+.navbar {
+  background-color: #000;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;    
+  align-items:center;
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 48px;
+  object-fit: contain;
+}
+
+.logo-text {
+  color: #facc15;
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Mobile Icons */
+.mobile-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-button {
+  display: block;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.toggle-button .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+/* Navigation Links */
+.navbar-links {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.navbar-links.active {
+  display: flex;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #facc15;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1f2937;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  min-width: 180px;
+}
+
+.dropdown-menu a {
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #facc15;
+  color: black;
+}
+
+/* Profile Icon */
+.icon-svg {
+  width: 28px;
+  height: 28px;
+  color: #facc15;
+}
+
+.profile-icon {
+  margin-left: 15px;
+}
+
+/* Desktop View */
+@media (min-width: 1024px) {
+  .navbar-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobile-icons {
+    display: none;
+  }
+
+  .navbar-links {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .dropdown-menu {
+    top: 35px;
+  }
+}
