@@ -3,6 +3,8 @@ status.txt
 branch.txt
 remote.txt
 rev.txt
+step*.txt
+status3.txt
 
 # Node dependencies
 Backend/node_modules/
