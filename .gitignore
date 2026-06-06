@@ -1,0 +1,18 @@
+.vscode/
+status.txt
+branch.txt
+remote.txt
+rev.txt
+
+# Node dependencies
+Backend/node_modules/
+pet-service/node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
